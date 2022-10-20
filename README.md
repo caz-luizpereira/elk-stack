@@ -8,7 +8,7 @@
 - [Github ELK oficial](https://github.com/elastic)
 - [YouTUBE ELK oficial](https://www.youtube.com/c/OfficialElasticCommunity)
 ### Images:
-  v 8.2.3 (estável)
+  v 8.4.3 (estável)
   - [Elasticsearch 8.4.3](https://www.docker.elastic.co/r/elasticsearch)
   - [Kibana 8.4.3](https://www.docker.elastic.co/r/kibana)
 
