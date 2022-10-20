@@ -23,7 +23,7 @@ Para adicionar configurações customizadas seja ao Elasticsearch ou Kibana, dev
   - ./kibana.yml:/usr/share/kibana/config/kibana.yml
 ```
 
-### Instalação do Elastic Agent
+### Instalação do *Elastic Agent*
 Primeiro deve-se provisionar o *Elastic Agent* através do integration no Kibana, após isso fazer o [download](https://www.elastic.co/pt/downloads/past-releases/elastic-agent-8-4-3) arquivo compactado **tar** de instalação do *Elastic Agent* e então descompactar o mesmo. Tembém é possível fazer o passo de download através de CLI, para maiores informações verificar [documentação de instalação](https://www.elastic.co/guide/en/fleet/8.4/install-standalone-elastic-agent.html) e [documentação de ](https://www.elastic.co/guide/en/fleet/8.4/create-standalone-agent-policy.html) referente ao tema.
 - #### Exemplo do processo via CLI
 ```console
