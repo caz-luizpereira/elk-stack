@@ -32,7 +32,7 @@ tar xzvf elastic-agent-8.4.3-linux-x86_64.tar.gz
 cd elastic-agent-8.4.3-linux-x86_64
 sudo ./elastic-agent install
 ```
-- ### Para desinstalar um *Elastic Agent* 
+### Para desinstalar um *Elastic Agent* 
 ```console
 $ cd /opt/Elastic/Agent
 $ elastic-agent uninstall
