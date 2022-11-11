@@ -1,1 +1,1 @@
-.\elastic-agent.exe install --insecure --url=https://192.168.2.148:8220 --enrollment-token=SDlXekdZUUJNOU9kMWlQaUlWaUY6WmNibGpidGpUay1fR0hSUFo3cWNMUQ==
+.\elastic-agent.exe install --insecure --url=https://192.168.2.138:8220 --enrollment-token=SDlXekdZUUJNOU9kMWlQaUlWaUY6WmNibGpidGpUay1fR0hSUFo3cWNMUQ==
