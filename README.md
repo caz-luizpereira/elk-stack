@@ -20,7 +20,8 @@ VB POC APP KEY : `c1VVSVBvUUJNOU9kMWlQaUhQdlU6M3VUX0NFSjRRdUcwcDhELXItMlN3dw==`
 - [Elastic Agent comandos e referências](https://www.elastic.co/guide/en/fleet/current/elastic-agent-cmd-options.html)
 - [Criar certificados(CA) para self-managed fleet server](https://www.elastic.co/guide/en/fleet/8.4/secure-connections.html)
 - [Doc. APM Beat](https://www.elastic.co/guide/en/apm/guide/8.4/apm-components.html)
-
+- [Kibana Configuração de Alertas](https://www.elastic.co/guide/en/kibana/8.4/alert-action-settings-kb.html#action-settings)
+- [Kibana chaves encriptação e decriptação (alertas e ações)](https://www.elastic.co/guide/en/kibana/8.4/xpack-security-secure-saved-objects.html#encryption-key-rotation)
 ## Images:
   v 8.4.3 (estável)
   - [Elasticsearch 8.4.3](https://www.docker.elastic.co/r/elasticsearch)
@@ -87,6 +88,16 @@ Para contornar este problema precisamos apontar o caminho absoluto do certificad
 - Shards pendentes (dados não gravados no Elastic)  
 A principal causa disso é armazenamento acima dos 85%. A stack Elastic impede a gravação de novos dados e cria uma pool para além de emitir alertas na UI quanto a shards pendentes de integração. Como solução devemos liberar espaço em disco.  
 
-
-
-VB POC API KEY : c1VVSVBvUUJNOU9kMWlQaUhQdlU6M3VUX0NFSjRRdUcwcDhELXItMlN3dw==
+- Problema na limitação de memória para os containers: `max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]`  
+em caso de reinicialização da máquina, a informação é perdida.
+  - Windows
+  ```console
+  wsl -d docker-desktop
+  sysctl -w vm.max_map_count=262144
+  ```
+  - Linux  
+  Para persistência desta informação, deve-se alterar este parâmetro em `/etc/sysctl.conf` e reiniciar o serviço docker `systemctl restart docker`
+  ```console
+  sysctl -w vm.max_map_count=262144
+  systemctl restart docker
+  ```  
