@@ -72,7 +72,7 @@ $ elastic-agent uninstall
   Invoke-WebRequest -Uri https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.4.3-windows-x86_64.zip -OutFile elastic-agent-8.4.3-windows-x86_64.zip
   Expand-Archive .\elastic-agent-8.4.3-windows-x86_64.zip -DestinationPath .
   cd elastic-agent-8.4.3-windows-x86_64
-  .\elastic-agent.exe install --insecure --url=https://192.168.2.148:8220 --enrollment-token=QklLUkQ0UUJ1SWRIRkdMZ0VITDI6UWI1cENMWHZTOVdKNm1ZSDR1WjdjZw==
+  .\elastic-agent.exe install --insecure --url=https://<Address>:8220 --enrollment-token=QklLUkQ0UUJ1SWRIRkdMZ0VITDI6UWI1cENMWHZTOVdKNm1ZSDR1WjdjZw==
 ```
 - Ter em atenção que a tag *--insecure* deve ser usada quando há **fleet-server** com CA self-signed. No ambiente de produção deve-se informar a *fleet-server.key* e *fleet-server.crt* criado com o *ca.crt*, para que este certificado seja apontado durante o deploy do *Elastic-Agent* que fará a monitoria das aplicações.
 
